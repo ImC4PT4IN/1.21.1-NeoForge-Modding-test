@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "group": "black_opal",
+  "category": "misc",
+  "ingredient": {
+    "item": "mccourse:raw_black_opal"
+  },
+  "result": {
+    "id": "mccourse:black_opal"
+  },
+  "experience": 3,
+  "cookingtime": 20
+}

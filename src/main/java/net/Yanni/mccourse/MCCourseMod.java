@@ -1,5 +1,10 @@
 package net.Yanni.mccourse;
 
+import net.Yanni.mccourse.block.ModBlocks;
+import net.Yanni.mccourse.item.ModCreativeModeTabs;
+import net.Yanni.mccourse.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -23,13 +28,16 @@ public class MCCourseMod {
     public static final String MOD_ID = "mccourse";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
+    // Create a Deferred Register to hold Blocks which will all be registered under the "mccourse" namespace
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public MCCourseMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
 
@@ -58,9 +66,12 @@ public class MCCourseMod {
         Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
-    // Add the example block item to the building blocks tab
+    // Add the example block item to the building block tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
