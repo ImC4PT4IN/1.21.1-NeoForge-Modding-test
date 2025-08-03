@@ -13,6 +13,13 @@
 
 
 
+ "tooltip.mccourse.tooltip.shift" : "Press §eShift§r for more Information!",
+ "tooltip.mccourse.tooltip.1" : "This chainsaw will cut trees!",
+ "tooltip.mccourse.magic_block.tooltip.1" : "§2Magical§r Block",
+ "tooltip.mccourse.tooltip.2" : "§4wroom wroom chainsaw§r",
+  "tooltip.mccourse.raw_black_opal.tooltip.1": "A raw ore",
+
+
   "itemGroup.mccourse.black_opal_items_tab" : "Black Opal Items",
   "itemGroup.mccourse.black_opal_blocks_tab" : "Black Opal Blocks"
 }
