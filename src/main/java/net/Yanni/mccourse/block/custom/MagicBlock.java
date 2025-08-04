@@ -1,6 +1,7 @@
 package net.Yanni.mccourse.block.custom;
 
 import net.Yanni.mccourse.item.ModItems;
+import net.Yanni.mccourse.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -45,8 +46,7 @@ public class MagicBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack item) {
-        return item.getItem() == ModItems.RAW_BLACK_OPAL.get() ||
-                item.getItem() == Items.COAL || item.getItem() == Items.EMERALD;
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
