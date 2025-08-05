@@ -6,6 +6,7 @@ import net.Yanni.mccourse.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -22,6 +23,44 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
         List<ItemLike> BLACK_OPAL_SMELTABLES = List.of(ModItems.BLACK_OPAL,
                 ModBlocks.BLACK_OPAL_ORE);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_SWORD.get())
+                .pattern(" B ")
+                .pattern(" B ")
+                .pattern(" A ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('A', Items.STICK)
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_PICKAXE.get())
+                .pattern("BBB")
+                .pattern(" A ")
+                .pattern(" A ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('A', Items.STICK)
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_AXE.get())
+                .pattern("BB ")
+                .pattern("BA ")
+                .pattern(" A ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('A', Items.STICK)
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_SHOVEL.get())
+                .pattern(" B ")
+                .pattern(" A ")
+                .pattern(" A ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('A', Items.STICK)
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_HOE.get())
+                .pattern("BB ")
+                .pattern(" A ")
+                .pattern(" A ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('A', Items.STICK)
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_OPAL_BLOCK.get())
                 .pattern("BBB")
                 .pattern("BBB")
@@ -43,8 +82,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_OPAL_WALL.get(), ModItems.BLACK_OPAL.get());
         fenceBuilder(ModBlocks.BLACK_OPAL_FENCE.get(),Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal").unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
         fenceGateBuilder(ModBlocks.BLACK_OPAL_FENCE_GATE.get(),Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal").unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
-
-
+        trapdoorBuilder(ModBlocks.BLACK_OPAL_TRAPDOOR.get(),Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal").unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        doorBuilder(ModBlocks.BLACK_OPAL_DOOR.get(),Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal").unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
     }
 
 

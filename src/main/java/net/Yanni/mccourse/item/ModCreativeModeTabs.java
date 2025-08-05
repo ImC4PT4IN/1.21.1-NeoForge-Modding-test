@@ -24,6 +24,12 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.BLACK_OPAL);
                         output.accept(ModItems.RAW_BLACK_OPAL);
+                        output.accept(ModItems.BLACK_OPAL_SWORD);
+                        output.accept(ModItems.BLACK_OPAL_PICKAXE);
+                        output.accept(ModItems.BLACK_OPAL_AXE);
+                        output.accept(ModItems.BLACK_OPAL_SHOVEL);
+                        output.accept(ModItems.BLACK_OPAL_HOE);
+                        output.accept(ModItems.BLACK_OPAL_PAXEL);
 
 
                         output.accept(ModItems.CHAINSAW);
@@ -48,6 +54,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLACK_OPAL_FENCE);
                         output.accept(ModBlocks.BLACK_OPAL_FENCE_GATE);
                         output.accept(ModBlocks.BLACK_OPAL_WALL);
+                        output.accept(ModBlocks.BLACK_OPAL_DOOR);
+                        output.accept(ModBlocks.BLACK_OPAL_TRAPDOOR);
 
 
 

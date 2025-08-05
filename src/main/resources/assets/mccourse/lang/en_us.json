@@ -2,6 +2,12 @@
   "item.mccourse.black_opal" : "Black Opal",
   "item.mccourse.raw_black_opal" : "Raw Black Opal",
   "item.mccourse.chainsaw" : "Chainsaw",
+  "item.mccourse.black_opal_sword" : "Black Opal Sword",
+  "item.mccourse.black_opal_pickaxe" : "Black Opal Pickaxe",
+  "item.mccourse.black_opal_axe" : "Black Opal Axe",
+  "item.mccourse.black_opal_shovel" : "Black Opal Shovel",
+  "item.mccourse.black_opal_hoe" : "Black Opal Hoe",
+  "item.mccourse.black_opal_paxel" : "Black Opal Paxel",
 
 
 
@@ -15,6 +21,8 @@
   "block.mccourse.black_opal_fence_gate" : "Black Opal Fence Gate",
   "block.mccourse.black_opal_wall" : "Black Opal Wall",
   "block.mccourse.black_opal_slab" : "Black Opal Slab",
+  "block.mccourse.black_opal_trapdoor" : "Black Opal Trapdoor",
+  "block.mccourse.black_opal_door" : "Black Opal Door",
   "block.mccourse.black_opal_ore" : "Black Opal Ore",
   "block.mccourse.magic_block" : "Magic Block",
 

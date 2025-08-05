@@ -2,6 +2,7 @@ package net.Yanni.mccourse.datagen;
 
 import net.Yanni.mccourse.MCCourseMod;
 import net.Yanni.mccourse.block.ModBlocks;
+import net.Yanni.mccourse.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -27,7 +28,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLACK_OPAL_SLAB.get())
                 .add(ModBlocks.BLACK_OPAL_WALL.get())
                 .add(ModBlocks.BLACK_OPAL_FENCE.get())
-                .add(ModBlocks.BLACK_OPAL_FENCE_GATE.get());
+                .add(ModBlocks.BLACK_OPAL_FENCE_GATE.get())
+                .add(ModBlocks.BLACK_OPAL_DOOR.get())
+                .add(ModBlocks.BLACK_OPAL_TRAPDOOR.get());
 
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -42,10 +45,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())
                 .add(ModBlocks.BLACK_OPAL_STAIRS.get())
                 .add(ModBlocks.BLACK_OPAL_WALL.get())
-                .add(ModBlocks.BLACK_OPAL_SLAB.get());
+                .add(ModBlocks.BLACK_OPAL_SLAB.get())
+                .add(ModBlocks.BLACK_OPAL_DOOR.get())
+                .add(ModBlocks.BLACK_OPAL_TRAPDOOR.get());
 
         this.tag(BlockTags.FENCES).add(ModBlocks.BLACK_OPAL_FENCE.get());
         this.tag(BlockTags.WALLS).add(ModBlocks.BLACK_OPAL_WALL.get());
         this.tag(BlockTags.FENCE_GATES).add(ModBlocks.BLACK_OPAL_FENCE_GATE.get());
+
+        this.tag(ModTags.Blocks.PAXEL_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
     }
 }

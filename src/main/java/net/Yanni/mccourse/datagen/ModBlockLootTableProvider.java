@@ -39,6 +39,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BLACK_OPAL_FENCE.get());
         dropSelf(ModBlocks.BLACK_OPAL_FENCE_GATE.get());
         dropSelf(ModBlocks.BLACK_OPAL_WALL.get());
+        dropSelf(ModBlocks.BLACK_OPAL_TRAPDOOR.get());
+
+        this.add(ModBlocks.BLACK_OPAL_DOOR.get(),
+                block -> createDoorTable(ModBlocks.BLACK_OPAL_DOOR.get()));
+
         this.add(ModBlocks.BLACK_OPAL_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.BLACK_OPAL_SLAB.get()));
 
