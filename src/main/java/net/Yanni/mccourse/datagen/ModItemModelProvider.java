@@ -23,6 +23,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_BLACK_OPAL.get());
         basicItem(ModItems.BLACK_OPAL.get());
         basicItem(ModItems.CHAINSAW.get());
+        basicItem(ModItems.BLACK_OPAL_HELMET.get());
+        basicItem(ModItems.BLACK_OPAL_CHESTPLATE.get());
+        basicItem(ModItems.BLACK_OPAL_LEGGINGS.get());
+        basicItem(ModItems.BLACK_OPAL_BOOTS.get());
         buttonItem(ModBlocks.BLACK_OPAL_BUTTON, ModBlocks.BLACK_OPAL_BLOCK);
         fenceItem(ModBlocks.BLACK_OPAL_FENCE, ModBlocks.BLACK_OPAL_BLOCK);
         wallItem(ModBlocks.BLACK_OPAL_WALL, ModBlocks.BLACK_OPAL_BLOCK);
@@ -36,6 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BLACK_OPAL_SHOVEL);
         handheldItem(ModItems.BLACK_OPAL_HOE);
         handheldItem(ModItems.BLACK_OPAL_PAXEL);
+        handheldItem(ModItems.BLACK_OPAL_HAMMER);
     }
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))

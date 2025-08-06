@@ -1,6 +1,7 @@
 package net.Yanni.mccourse;
 
 import net.Yanni.mccourse.block.ModBlocks;
+import net.Yanni.mccourse.item.ModArmorMaterials;
 import net.Yanni.mccourse.item.ModCreativeModeTabs;
 import net.Yanni.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -38,6 +39,7 @@ public class MCCourseMod {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModArmorMaterials.register(modEventBus);
 
 
 

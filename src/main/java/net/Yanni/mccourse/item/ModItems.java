@@ -1,9 +1,10 @@
 package net.Yanni.mccourse.item;
 
 import net.Yanni.mccourse.MCCourseMod;
-import net.Yanni.mccourse.item.custom.ChainsawItem;
-import net.Yanni.mccourse.item.custom.Paxelitem;
+import net.Yanni.mccourse.item.custom.*;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -28,7 +29,7 @@ public class ModItems {
             ChainsawItem::new, new Item.Properties().durability(128));
 
     public static final DeferredItem<Item> BLACK_OPAL_SWORD = ITEMS.register("black_opal_sword",
-            () -> new SwordItem(ModToolsTiers.BLACK_OPAL, new Item.Properties().attributes(SwordItem.createAttributes(ModToolsTiers.BLACK_OPAL,3,-2.4f))));
+            () -> new ModEffectSwordItem(ModToolsTiers.BLACK_OPAL, new Item.Properties().attributes(SwordItem.createAttributes(ModToolsTiers.BLACK_OPAL,3,-2.4f)), MobEffects.LEVITATION));
     public static final DeferredItem<Item> BLACK_OPAL_PICKAXE = ITEMS.register("black_opal_pickaxe",
             () -> new PickaxeItem(ModToolsTiers.BLACK_OPAL, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolsTiers.BLACK_OPAL,1,-2.8f))));
     public static final DeferredItem<Item> BLACK_OPAL_AXE = ITEMS.register("black_opal_axe",
@@ -40,6 +41,21 @@ public class ModItems {
 
     public static final DeferredItem<Item> BLACK_OPAL_PAXEL = ITEMS.register("black_opal_paxel",
             () -> new Paxelitem(ModToolsTiers.BLACK_OPAL, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolsTiers.BLACK_OPAL,1,-2.8f))));
+    public static final DeferredItem<Item> BLACK_OPAL_HAMMER = ITEMS.register("black_opal_hammer",
+            () -> new HammerItem(ModToolsTiers.BLACK_OPAL, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolsTiers.BLACK_OPAL,8,-3.3f))));
+
+    public static final DeferredItem<Item> BLACK_OPAL_HELMET = ITEMS.register("black_opal_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.BLACK_OPAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(16))));
+    public static final DeferredItem<Item> BLACK_OPAL_CHESTPLATE = ITEMS.register("black_opal_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.BLACK_OPAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(16))));
+    public static final DeferredItem<Item> BLACK_OPAL_LEGGINGS = ITEMS.register("black_opal_leggings",
+            () -> new ArmorItem(ModArmorMaterials.BLACK_OPAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(16))));
+    public static final DeferredItem<Item> BLACK_OPAL_BOOTS = ITEMS.register("black_opal_boots",
+            () -> new ArmorItem(ModArmorMaterials.BLACK_OPAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(16))));
 
 
 

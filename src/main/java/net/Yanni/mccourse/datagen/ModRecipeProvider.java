@@ -32,6 +32,31 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.STICK)
                 .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_CHESTPLATE.get())
+                .pattern("B B")
+                .pattern("BBB")
+                .pattern("BBB")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_HELMET.get())
+                .pattern("   ")
+                .pattern("BBB")
+                .pattern("B B")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_LEGGINGS.get())
+                .pattern("BBB")
+                .pattern("B B")
+                .pattern("B B")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_BOOTS.get())
+                .pattern("   ")
+                .pattern("B B")
+                .pattern("B B")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_PICKAXE.get())
                 .pattern("BBB")
                 .pattern(" A ")

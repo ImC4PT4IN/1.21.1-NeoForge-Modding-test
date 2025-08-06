@@ -30,6 +30,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BLACK_OPAL_SHOVEL);
                         output.accept(ModItems.BLACK_OPAL_HOE);
                         output.accept(ModItems.BLACK_OPAL_PAXEL);
+                        output.accept(ModItems.BLACK_OPAL_HAMMER);
+                        output.accept(ModItems.BLACK_OPAL_HELMET);
+                        output.accept(ModItems.BLACK_OPAL_CHESTPLATE);
+                        output.accept(ModItems.BLACK_OPAL_LEGGINGS);
+                        output.accept(ModItems.BLACK_OPAL_BOOTS);
 
 
                         output.accept(ModItems.CHAINSAW);
