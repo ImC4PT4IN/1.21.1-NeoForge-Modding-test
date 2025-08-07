@@ -35,6 +35,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BLACK_OPAL_CHESTPLATE);
                         output.accept(ModItems.BLACK_OPAL_LEGGINGS);
                         output.accept(ModItems.BLACK_OPAL_BOOTS);
+                        output.accept(ModItems.BLACK_OPAL_HORSE_ARMOR);
+                        output.accept(ModItems.KAUPEN_SMITHING_TEMPLATE);
 
 
                         output.accept(ModItems.CHAINSAW);
