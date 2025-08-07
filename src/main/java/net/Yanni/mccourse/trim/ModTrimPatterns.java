@@ -20,9 +20,9 @@ public class ModTrimPatterns {
         register(context, ModItems.KAUPEN_SMITHING_TEMPLATE, KAUPEN);
     }
 
-        private static void register(BootstrapContext<TrimPattern> context, DeferredItem<Item> item, ResourceKey<TrimPattern> key) {
-            TrimPattern trimPattern = new TrimPattern(key.location(), item.getDelegate(),
-                    Component.translatable(Util.makeDescriptionId("trim_pattern", key.location())), false);
-            context.register(key, trimPattern);
-        }
-        }
+    private static void register(BootstrapContext<TrimPattern> context, DeferredItem<Item> item, ResourceKey<TrimPattern> key) {
+        TrimPattern trimPattern = new TrimPattern(key.location(), item.getDelegate(),
+                Component.translatable(Util.makeDescriptionId("trim_pattern", key.location())), false);
+        context.register(key, trimPattern);
+    }
+}
